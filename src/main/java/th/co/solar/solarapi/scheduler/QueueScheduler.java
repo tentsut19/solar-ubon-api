@@ -26,4 +26,11 @@ public class QueueScheduler {
             consumerService.processQueue();
         }
     }
+
+    @Scheduled(cron = "${queue.weather-cron}")
+    public void executeWeather() throws IOException {
+        if (enable) {
+            consumerService.processQueueWeather();
+        }
+    }
 }

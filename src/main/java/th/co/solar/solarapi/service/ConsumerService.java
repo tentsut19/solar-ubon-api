@@ -6,6 +6,8 @@ import com.google.firebase.FirebaseOptions;
 import com.google.firebase.database.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import th.co.solar.solarapi.model.WeatherForecast7Days;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,7 +19,7 @@ import java.util.Map;
 @Service
 @Slf4j
 public class ConsumerService {
-    public void processQueue() throws IOException {
+    public void processQueue() {
         log.info("Start consume queue at {}", new Date());
 
         // Get a reference to our posts
@@ -114,5 +116,17 @@ public class ConsumerService {
             }
         });
 
+    }
+
+    public void processQueueWeather() {
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference weatherForecast7Days = database.getReference("WeatherForecast7Days");
+        log.info("Start processQueueWeather at {}", new Date());
+        final String uri = "https://data.tmd.go.th/api/WeatherForecast7Days/V1/?type=json";
+
+        RestTemplate restTemplate = new RestTemplate();
+        WeatherForecast7Days result = restTemplate.getForObject(uri, WeatherForecast7Days.class);
+        log.info("WeatherForecast7Days : {}",result);
+        weatherForecast7Days.setValueAsync(result);
     }
 }
