@@ -9,6 +9,6 @@ server:
 queue:
 #  interval-cron: '0 0 1-2 * * *'
 #  interval-cron: '*/10 * * * * *'
-  interval-cron: '0 0 3 * * *'
-  weather-cron: '0 0 5 * * *'
+  interval-cron: '0 0 1 * * *'
+  weather-cron: '0 36 11 * * *'
   enable: true

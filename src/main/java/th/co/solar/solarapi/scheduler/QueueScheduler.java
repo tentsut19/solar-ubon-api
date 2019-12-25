@@ -20,14 +20,14 @@ public class QueueScheduler {
     @Autowired
     private ConsumerService consumerService;
 
-    @Scheduled(cron = "${queue.interval-cron}")
+    @Scheduled(cron = "${queue.interval-cron}", zone="Asia/Bangkok")
     public void execute() throws IOException {
         if (enable) {
             consumerService.processQueue();
         }
     }
 
-    @Scheduled(cron = "${queue.weather-cron}")
+    @Scheduled(cron = "${queue.weather-cron}", zone="Asia/Bangkok")
     public void executeWeather() throws IOException {
         if (enable) {
             consumerService.processQueueWeather();
