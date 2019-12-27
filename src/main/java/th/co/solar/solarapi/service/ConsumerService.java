@@ -141,4 +141,16 @@ public class ConsumerService {
         log.info("WeatherToday : {}",result);
         WeatherTodayRef.setValueAsync(result);
     }
+
+    public void processQueueWeather3Hours() {
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference WeatherTodayRef = database.getReference("Weather3Hours");
+        log.info("Start processQueueWeather at {}", new Date());
+        final String uri = "https://data.tmd.go.th/api/Weather3Hours/V1/?type=json";
+
+        RestTemplate restTemplate = new RestTemplate();
+        Object result = restTemplate.getForObject(uri, Object.class);
+        log.info("Weather3Hours : {}",result);
+        WeatherTodayRef.setValueAsync(result);
+    }
 }

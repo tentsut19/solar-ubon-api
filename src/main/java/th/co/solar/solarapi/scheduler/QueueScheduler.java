@@ -40,4 +40,11 @@ public class QueueScheduler {
             consumerService.processQueueWeatherToday();
         }
     }
+
+    @Scheduled(cron = "${queue.weather-3-hours-cron}", zone="Asia/Bangkok")
+    public void executeWeather3Hours() throws IOException {
+        if (enable) {
+            consumerService.processQueueWeather3Hours();
+        }
+    }
 }
