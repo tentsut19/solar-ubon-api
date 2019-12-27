@@ -31,7 +31,7 @@ public class ConsumerService {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                log.info("dataSnapshot : {}",dataSnapshot);
+//                log.info("dataSnapshot : {}",dataSnapshot);
                 if(dataSnapshot.exists()){
                     HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                     if(hashMapData != null) {
