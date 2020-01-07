@@ -22,6 +22,7 @@ public class ConsumerService {
 
     public void processQueueTotal() {
         log.info("Start processQueueTotal at {}", new Date());
+try {
 
         final Long[] gridkwTall = {0L};
         final Long[] LoadkwTall = {0L};
@@ -242,6 +243,9 @@ public class ConsumerService {
                                                                                             Object group_obj = hashMapData.get("group");
                                                                                             if (group_obj != null) {
                                                                                                 group = Long.valueOf((String)group_obj);
+                                                                                                if(group == 0){
+                                                                                                    group = 1L;
+                                                                                                }
                                                                                             }
                                                                                             HashMap dataMap = (HashMap) obj;
                                                                                             Long solartotalinput = 0L;
@@ -298,6 +302,9 @@ public class ConsumerService {
                                                                                                         Object group_obj = hashMapData.get("group");
                                                                                                         if (group_obj != null) {
                                                                                                             group = Long.valueOf((String)group_obj);
+                                                                                                            if(group == 0){
+                                                                                                                group = 1L;
+                                                                                                            }
                                                                                                         }
                                                                                                         HashMap dataMap = (HashMap) obj;
                                                                                                         Long solartotalinput = 0L;
@@ -350,10 +357,13 @@ public class ConsumerService {
                                                                                                                     if (obj == null) {
                                                                                                                         return;
                                                                                                                     }
-                                                                                                                    Long group = 0L;
+                                                                                                                    Long group = 1L;
                                                                                                                     Object group_obj = hashMapData.get("group");
                                                                                                                     if (group_obj != null) {
                                                                                                                         group = Long.valueOf((String)group_obj);
+                                                                                                                        if(group == 0){
+                                                                                                                            group = 1L;
+                                                                                                                        }
                                                                                                                     }
                                                                                                                     HashMap dataMap = (HashMap) obj;
                                                                                                                     Long solartotalinput = 0L;
@@ -411,6 +421,9 @@ public class ConsumerService {
                                                                                                                                 Object group_obj = hashMapData.get("group");
                                                                                                                                 if (group_obj != null) {
                                                                                                                                     group = Long.valueOf((String)group_obj);
+                                                                                                                                    if(group == 0){
+                                                                                                                                        group = 1L;
+                                                                                                                                    }
                                                                                                                                 }
                                                                                                                                 HashMap dataMap = (HashMap) obj;
                                                                                                                                 Long solartotalinput = 0L;
@@ -468,6 +481,9 @@ public class ConsumerService {
                                                                                                                                             Object group_obj = hashMapData.get("group");
                                                                                                                                             if (group_obj != null) {
                                                                                                                                                 group = Long.valueOf((String)group_obj);
+                                                                                                                                                if(group == 0){
+                                                                                                                                                    group = 1L;
+                                                                                                                                                }
                                                                                                                                             }
                                                                                                                                             HashMap dataMap = (HashMap) obj;
                                                                                                                                             Long solartotalinput = 0L;
@@ -525,6 +541,9 @@ public class ConsumerService {
                                                                                                                                                         Object group_obj = hashMapData.get("group");
                                                                                                                                                         if (group_obj != null) {
                                                                                                                                                             group = Long.valueOf((String)group_obj);
+                                                                                                                                                            if(group == 0){
+                                                                                                                                                                group = 1L;
+                                                                                                                                                            }
                                                                                                                                                         }
                                                                                                                                                         HashMap dataMap = (HashMap) obj;
                                                                                                                                                         Long solartotalinput = 0L;
@@ -591,19 +610,19 @@ public class ConsumerService {
                                                                                                                                                                     Long solartotaloutputacc = 0L;
                                                                                                                                                                     Object griduse_obj = dataMap.get("griduse");
                                                                                                                                                                     if(griduse_obj != null){
-                                                                                                                                                                        griduse = Long.valueOf((String)griduse_obj);
+                                                                                                                                                                        griduse = (Long)griduse_obj;
                                                                                                                                                                     }
                                                                                                                                                                     Object load_obj = dataMap.get("load");
                                                                                                                                                                     if(load_obj != null){
-                                                                                                                                                                        load = Long.valueOf((String)load_obj);
+                                                                                                                                                                        load = (Long)load_obj;
                                                                                                                                                                     }
                                                                                                                                                                     Object solartotalinputacc_obj = dataMap.get("solartotalinputacc");
                                                                                                                                                                     if(solartotalinputacc_obj != null){
-                                                                                                                                                                        solartotalinputacc = Long.valueOf((String)solartotalinputacc_obj);
+                                                                                                                                                                        solartotalinputacc = (Long)solartotalinputacc_obj;
                                                                                                                                                                     }
                                                                                                                                                                     Object solartotaloutputacc_obj = dataMap.get("solartotaloutputacc");
                                                                                                                                                                     if(solartotaloutputacc_obj != null){
-                                                                                                                                                                        solartotaloutputacc = Long.valueOf((String)solartotaloutputacc_obj);
+                                                                                                                                                                        solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                     }
 
                                                                                                                                                                     log.info("griduses3g1 : {}", griduse);
@@ -635,19 +654,19 @@ public class ConsumerService {
                                                                                                                                                                                 Long solartotaloutputacc = 0L;
                                                                                                                                                                                 Object griduse_obj = dataMap.get("griduse");
                                                                                                                                                                                 if(griduse_obj != null){
-                                                                                                                                                                                    griduse = Long.valueOf((String)griduse_obj);
+                                                                                                                                                                                    griduse = (Long)griduse_obj;
                                                                                                                                                                                 }
                                                                                                                                                                                 Object load_obj = dataMap.get("load");
                                                                                                                                                                                 if(load_obj != null){
-                                                                                                                                                                                    load = Long.valueOf((String)load_obj);
+                                                                                                                                                                                    load = (Long)load_obj;
                                                                                                                                                                                 }
                                                                                                                                                                                 Object solartotalinputacc_obj = dataMap.get("solartotalinputacc");
                                                                                                                                                                                 if(solartotalinputacc_obj != null){
-                                                                                                                                                                                    solartotalinputacc = Long.valueOf((String)solartotalinputacc_obj);
+                                                                                                                                                                                    solartotalinputacc = (Long)solartotalinputacc_obj;
                                                                                                                                                                                 }
                                                                                                                                                                                 Object solartotaloutputacc_obj = dataMap.get("solartotaloutputacc");
                                                                                                                                                                                 if(solartotaloutputacc_obj != null){
-                                                                                                                                                                                    solartotaloutputacc = Long.valueOf((String)solartotaloutputacc_obj);
+                                                                                                                                                                                    solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                 }
 
                                                                                                                                                                                 log.info("griduses3g2 : {}", griduse);
@@ -679,19 +698,19 @@ public class ConsumerService {
                                                                                                                                                                                             Long solartotaloutputacc = 0L;
                                                                                                                                                                                             Object griduse_obj = dataMap.get("griduse");
                                                                                                                                                                                             if(griduse_obj != null){
-                                                                                                                                                                                                griduse = Long.valueOf((String)griduse_obj);
+                                                                                                                                                                                                griduse = (Long)griduse_obj;
                                                                                                                                                                                             }
                                                                                                                                                                                             Object load_obj = dataMap.get("load");
                                                                                                                                                                                             if(load_obj != null){
-                                                                                                                                                                                                load = Long.valueOf((String)load_obj);
+                                                                                                                                                                                                load = (Long)load_obj;
                                                                                                                                                                                             }
                                                                                                                                                                                             Object solartotalinputacc_obj = dataMap.get("solartotalinputacc");
                                                                                                                                                                                             if(solartotalinputacc_obj != null){
-                                                                                                                                                                                                solartotalinputacc = Long.valueOf((String)solartotalinputacc_obj);
+                                                                                                                                                                                                solartotalinputacc = (Long)solartotalinputacc_obj;
                                                                                                                                                                                             }
                                                                                                                                                                                             Object solartotaloutputacc_obj = dataMap.get("solartotaloutputacc");
                                                                                                                                                                                             if(solartotaloutputacc_obj != null){
-                                                                                                                                                                                                solartotaloutputacc = Long.valueOf((String)solartotaloutputacc_obj);
+                                                                                                                                                                                                solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                             }
 
                                                                                                                                                                                             log.info("griduses3g3 : {}", griduse);
@@ -723,19 +742,19 @@ public class ConsumerService {
                                                                                                                                                                                                         Long solartotaloutputacc = 0L;
                                                                                                                                                                                                         Object griduse_obj = dataMap.get("griduse");
                                                                                                                                                                                                         if(griduse_obj != null){
-                                                                                                                                                                                                            griduse = Long.valueOf((String)griduse_obj);
+                                                                                                                                                                                                            griduse = (Long)griduse_obj;
                                                                                                                                                                                                         }
                                                                                                                                                                                                         Object load_obj = dataMap.get("load");
                                                                                                                                                                                                         if(load_obj != null){
-                                                                                                                                                                                                            load = Long.valueOf((String)load_obj);
+                                                                                                                                                                                                            load = (Long)load_obj;
                                                                                                                                                                                                         }
                                                                                                                                                                                                         Object solartotalinputacc_obj = dataMap.get("solartotalinputacc");
                                                                                                                                                                                                         if(solartotalinputacc_obj != null){
-                                                                                                                                                                                                            solartotalinputacc = Long.valueOf((String)solartotalinputacc_obj);
+                                                                                                                                                                                                            solartotalinputacc = (Long)solartotalinputacc_obj;
                                                                                                                                                                                                         }
                                                                                                                                                                                                         Object solartotaloutputacc_obj = dataMap.get("solartotaloutputacc");
                                                                                                                                                                                                         if(solartotaloutputacc_obj != null){
-                                                                                                                                                                                                            solartotaloutputacc = Long.valueOf((String)solartotaloutputacc_obj);
+                                                                                                                                                                                                            solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                                         }
 
                                                                                                                                                                                                         log.info("griduses3g4 : {}", griduse);
@@ -767,19 +786,19 @@ public class ConsumerService {
                                                                                                                                                                                                                     Long solartotaloutputacc = 0L;
                                                                                                                                                                                                                     Object griduse_obj = dataMap.get("griduse");
                                                                                                                                                                                                                     if(griduse_obj != null){
-                                                                                                                                                                                                                        griduse = Long.valueOf((String)griduse_obj);
+                                                                                                                                                                                                                        griduse = (Long)griduse_obj;
                                                                                                                                                                                                                     }
                                                                                                                                                                                                                     Object load_obj = dataMap.get("load");
                                                                                                                                                                                                                     if(load_obj != null){
-                                                                                                                                                                                                                        load = Long.valueOf((String)load_obj);
+                                                                                                                                                                                                                        load = (Long)load_obj;
                                                                                                                                                                                                                     }
                                                                                                                                                                                                                     Object solartotalinputacc_obj = dataMap.get("solartotalinputacc");
                                                                                                                                                                                                                     if(solartotalinputacc_obj != null){
-                                                                                                                                                                                                                        solartotalinputacc = Long.valueOf((String)solartotalinputacc_obj);
+                                                                                                                                                                                                                        solartotalinputacc = (Long)solartotalinputacc_obj;
                                                                                                                                                                                                                     }
                                                                                                                                                                                                                     Object solartotaloutputacc_obj = dataMap.get("solartotaloutputacc");
                                                                                                                                                                                                                     if(solartotaloutputacc_obj != null){
-                                                                                                                                                                                                                        solartotaloutputacc = Long.valueOf((String)solartotaloutputacc_obj);
+                                                                                                                                                                                                                        solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                                                     }
 
                                                                                                                                                                                                                     log.info("griduses3g5 : {}", griduse);
@@ -811,19 +830,19 @@ public class ConsumerService {
                                                                                                                                                                                                                                 Long solartotaloutputacc = 0L;
                                                                                                                                                                                                                                 Object griduse_obj = dataMap.get("griduse");
                                                                                                                                                                                                                                 if(griduse_obj != null){
-                                                                                                                                                                                                                                    griduse = Long.valueOf((String)griduse_obj);
+                                                                                                                                                                                                                                    griduse = (Long)griduse_obj;
                                                                                                                                                                                                                                 }
                                                                                                                                                                                                                                 Object load_obj = dataMap.get("load");
                                                                                                                                                                                                                                 if(load_obj != null){
-                                                                                                                                                                                                                                    load = Long.valueOf((String)load_obj);
+                                                                                                                                                                                                                                    load = (Long)load_obj;
                                                                                                                                                                                                                                 }
                                                                                                                                                                                                                                 Object solartotalinputacc_obj = dataMap.get("solartotalinputacc");
                                                                                                                                                                                                                                 if(solartotalinputacc_obj != null){
-                                                                                                                                                                                                                                    solartotalinputacc = Long.valueOf((String)solartotalinputacc_obj);
+                                                                                                                                                                                                                                    solartotalinputacc = (Long)solartotalinputacc_obj;
                                                                                                                                                                                                                                 }
                                                                                                                                                                                                                                 Object solartotaloutputacc_obj = dataMap.get("solartotaloutputacc");
                                                                                                                                                                                                                                 if(solartotaloutputacc_obj != null){
-                                                                                                                                                                                                                                    solartotaloutputacc = Long.valueOf((String)solartotaloutputacc_obj);
+                                                                                                                                                                                                                                    solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                                                                 }
 
                                                                                                                                                                                                                                 log.info("griduses3g6 : {}", griduse);
@@ -840,6 +859,24 @@ public class ConsumerService {
                                                                                                                                                                                                                                 log.info("loadall : {}", loadall[0]);
                                                                                                                                                                                                                                 log.info("solartotalinputaccall : {}", solartotalinputaccall[0]);
                                                                                                                                                                                                                                 log.info("solartotaloutputaccall : {}", solartotaloutputaccall[0]);
+
+
+                                                                                                                                                                                                                                Map<String, Object> userUpdates = new HashMap<>();
+                                                                                                                                                                                                                                userUpdates.put("gridkwTall", gridkwTall[0]);
+                                                                                                                                                                                                                                userUpdates.put("LoadkwTall", LoadkwTall[0]);
+
+                                                                                                                                                                                                                                userUpdates.put("solartotalinputall", solartotalinputall[0]);
+                                                                                                                                                                                                                                userUpdates.put("solartotaloutputall", solartotaloutputall[0]);
+                                                                                                                                                                                                                                userUpdates.put("persengridall", persengridall[0]);
+                                                                                                                                                                                                                                userUpdates.put("persenpvall", persenpvall[0]);
+                                                                                                                                                                                                                                userUpdates.put("persensolarall", persensolarall[0]);
+
+                                                                                                                                                                                                                                userUpdates.put("griduseall", griduseall[0]);
+                                                                                                                                                                                                                                userUpdates.put("loadall", loadall[0]);
+                                                                                                                                                                                                                                userUpdates.put("solartotalinputaccall", solartotalinputaccall[0]);
+                                                                                                                                                                                                                                userUpdates.put("solartotaloutputaccall", solartotaloutputaccall[0]);
+
+                                                                                                                                                                                                                                refTotal.setValueAsync(userUpdates);
 
 
                                                                                                                                                                                                                             }
@@ -1023,6 +1060,10 @@ public class ConsumerService {
         });
 
 
+}catch (Exception e){
+    log.error("Exception : ");
+    e.printStackTrace();
+}
 
     }
 
