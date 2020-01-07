@@ -23,7 +23,7 @@ public class QueueScheduler {
     @Scheduled(cron = "${queue.interval-cron}", zone="Asia/Bangkok")
     public void execute() throws IOException {
         if (enable) {
-            consumerService.processQueue();
+            consumerService.processQueueTotal();
         }
     }
 
