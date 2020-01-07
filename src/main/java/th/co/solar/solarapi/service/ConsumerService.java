@@ -40,7 +40,7 @@ try {
 
         // Get a reference to our posts
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference refTotal = database.getReference("ParameterDailyTotal");
+        DatabaseReference refTotal = database.getReference("ParameterTotalS1");
 
         DatabaseReference ref1s1g1 = database.getReference("ParameterRealtime1S1G1");
         DatabaseReference ref1s1g2 = database.getReference("ParameterRealtime1S1G2");
