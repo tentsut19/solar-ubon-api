@@ -70,7 +70,6 @@ try {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 log.info("isStart[0] : {}",isStart[0]);
                 if(dataSnapshot.exists() && isStart[0]){
-                    isStart[0] = false;
                     HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                     Object obj = hashMapData.get("DataRealtime1S1G1");
                     if (obj == null) {
@@ -887,7 +886,7 @@ try {
                                                                                                                                                                                                                                 userUpdates.put("solartotaloutputaccall", solartotaloutputaccall[0]);
                                                                                                                                                                                                                                 log.info("userUpdates : {}", userUpdates);
                                                                                                                                                                                                                                 refTotal.setValueAsync(userUpdates);
-
+                                                                                                                                                                                                                                isStart[0] = false;
                                                                                                                                                                                                                             }
                                                                                                                                                                                                                         }
 
