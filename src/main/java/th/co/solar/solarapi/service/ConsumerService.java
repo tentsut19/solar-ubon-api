@@ -22,6 +22,7 @@ public class ConsumerService {
 
     public void processQueueTotal() {
         log.info("Start processQueueTotal at {}", new Date());
+        final boolean[] isStart = {true};
 try {
 
         final Long[] gridkwTall = {0L};
@@ -67,7 +68,9 @@ try {
         ref1s1g1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
+                log.info("isStart[0] : {}",isStart[0]);
+                if(dataSnapshot.exists() && isStart[0]){
+                    isStart[0] = false;
                     HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                     Object obj = hashMapData.get("DataRealtime1S1G1");
                     if (obj == null) {
@@ -94,7 +97,7 @@ try {
                     ref1s1g2.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists()){
+                            if(dataSnapshot.exists() && isStart[0]){
                                 HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                 Object obj = hashMapData.get("DataRealtime1S1G2");
                                 if (obj == null) {
@@ -121,7 +124,7 @@ try {
                                 ref1s1g3.addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
-                                        if(dataSnapshot.exists()){
+                                        if(dataSnapshot.exists() && isStart[0]){
                                             HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                             Object obj = hashMapData.get("DataRealtime1S1G3");
                                             if (obj == null) {
@@ -148,7 +151,7 @@ try {
                                             ref1s1g4.addValueEventListener(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                    if(dataSnapshot.exists()){
+                                                    if(dataSnapshot.exists() && isStart[0]){
                                                         HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                         Object obj = hashMapData.get("DataRealtime1S1G4");
                                                         if (obj == null) {
@@ -175,7 +178,7 @@ try {
                                                         ref1s1g5.addValueEventListener(new ValueEventListener() {
                                                             @Override
                                                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                if(dataSnapshot.exists()){
+                                                                if(dataSnapshot.exists() && isStart[0]){
                                                                     HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                     Object obj = hashMapData.get("DataRealtime1S1G5");
                                                                     if (obj == null) {
@@ -202,7 +205,7 @@ try {
                                                                     ref1s1g6.addValueEventListener(new ValueEventListener() {
                                                                         @Override
                                                                         public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                            if(dataSnapshot.exists()){
+                                                                            if(dataSnapshot.exists() && isStart[0]){
                                                                                 HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                 Object obj = hashMapData.get("DataRealtime1S1G6");
                                                                                 if (obj == null) {
@@ -233,7 +236,7 @@ try {
                                                                                 ref2s1g1.addValueEventListener(new ValueEventListener() {
                                                                                     @Override
                                                                                     public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                        if(dataSnapshot.exists()){
+                                                                                        if(dataSnapshot.exists() && isStart[0]){
                                                                                             HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                             Object obj = hashMapData.get("DataRealtime2S1G1");
                                                                                             if (obj == null) {
@@ -292,7 +295,7 @@ try {
                                                                                             ref2s1g2.addValueEventListener(new ValueEventListener() {
                                                                                                 @Override
                                                                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                    if(dataSnapshot.exists()){
+                                                                                                    if(dataSnapshot.exists() && isStart[0]){
                                                                                                         HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                         Object obj = hashMapData.get("DataRealtime2S1G2");
                                                                                                         if (obj == null) {
@@ -351,7 +354,7 @@ try {
                                                                                                         ref2s1g3.addValueEventListener(new ValueEventListener() {
                                                                                                             @Override
                                                                                                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                if(dataSnapshot.exists()){
+                                                                                                                if(dataSnapshot.exists() && isStart[0]){
                                                                                                                     HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                     Object obj = hashMapData.get("DataRealtime2S1G3");
                                                                                                                     if (obj == null) {
@@ -411,7 +414,7 @@ try {
                                                                                                                     ref2s1g4.addValueEventListener(new ValueEventListener() {
                                                                                                                         @Override
                                                                                                                         public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                            if(dataSnapshot.exists()){
+                                                                                                                            if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                 HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                 Object obj = hashMapData.get("DataRealtime2S1G4");
                                                                                                                                 if (obj == null) {
@@ -471,7 +474,7 @@ try {
                                                                                                                                 ref2s1g5.addValueEventListener(new ValueEventListener() {
                                                                                                                                     @Override
                                                                                                                                     public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                                        if(dataSnapshot.exists()){
+                                                                                                                                        if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                             HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                             Object obj = hashMapData.get("DataRealtime2S1G5");
                                                                                                                                             if (obj == null) {
@@ -531,7 +534,7 @@ try {
                                                                                                                                             ref2s1g6.addValueEventListener(new ValueEventListener() {
                                                                                                                                                 @Override
                                                                                                                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                                                    if(dataSnapshot.exists()){
+                                                                                                                                                    if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                                         HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                                         Object obj = hashMapData.get("DataRealtime2S1G6");
                                                                                                                                                         if (obj == null) {
@@ -597,7 +600,7 @@ try {
                                                                                                                                                         ref3s1g1.addValueEventListener(new ValueEventListener() {
                                                                                                                                                             @Override
                                                                                                                                                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                                                                if(dataSnapshot.exists()){
+                                                                                                                                                                if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                                                     HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                                                     Object obj = hashMapData.get("DataRealtime3S1G1");
                                                                                                                                                                     if (obj == null) {
@@ -641,7 +644,7 @@ try {
                                                                                                                                                                     ref3s1g2.addValueEventListener(new ValueEventListener() {
                                                                                                                                                                         @Override
                                                                                                                                                                         public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                                                                            if(dataSnapshot.exists()){
+                                                                                                                                                                            if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                                                                 HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                                                                 Object obj = hashMapData.get("DataRealtime3S1G2");
                                                                                                                                                                                 if (obj == null) {
@@ -685,7 +688,7 @@ try {
                                                                                                                                                                                 ref3s1g3.addValueEventListener(new ValueEventListener() {
                                                                                                                                                                                     @Override
                                                                                                                                                                                     public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                                                                                        if(dataSnapshot.exists()){
+                                                                                                                                                                                        if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                                                                             HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                                                                             Object obj = hashMapData.get("DataRealtime3S1G3");
                                                                                                                                                                                             if (obj == null) {
@@ -729,7 +732,7 @@ try {
                                                                                                                                                                                             ref3s1g4.addValueEventListener(new ValueEventListener() {
                                                                                                                                                                                                 @Override
                                                                                                                                                                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                                                                                                    if(dataSnapshot.exists()){
+                                                                                                                                                                                                    if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                                                                                         HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                                                                                         Object obj = hashMapData.get("DataRealtime3S1G4");
                                                                                                                                                                                                         if (obj == null) {
@@ -773,7 +776,7 @@ try {
                                                                                                                                                                                                         ref3s1g5.addValueEventListener(new ValueEventListener() {
                                                                                                                                                                                                             @Override
                                                                                                                                                                                                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                                                                                                                if(dataSnapshot.exists()){
+                                                                                                                                                                                                                if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                                                                                                     HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                                                                                                     Object obj = hashMapData.get("DataRealtime3S1G5");
                                                                                                                                                                                                                     if (obj == null) {
@@ -817,7 +820,7 @@ try {
                                                                                                                                                                                                                     ref3s1g6.addValueEventListener(new ValueEventListener() {
                                                                                                                                                                                                                         @Override
                                                                                                                                                                                                                         public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                                                                                                                                                                            if(dataSnapshot.exists()){
+                                                                                                                                                                                                                            if(dataSnapshot.exists() && isStart[0]){
                                                                                                                                                                                                                                 HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                                                                                                                                                                                                                                 Object obj = hashMapData.get("DataRealtime3S1G6");
                                                                                                                                                                                                                                 if (obj == null) {
@@ -882,11 +885,8 @@ try {
                                                                                                                                                                                                                                 userUpdates.put("loadall", loadall[0]);
                                                                                                                                                                                                                                 userUpdates.put("solartotalinputaccall", solartotalinputaccall[0]);
                                                                                                                                                                                                                                 userUpdates.put("solartotaloutputaccall", solartotaloutputaccall[0]);
-
                                                                                                                                                                                                                                 log.info("userUpdates : {}", userUpdates);
-
                                                                                                                                                                                                                                 refTotal.setValueAsync(userUpdates);
-
 
                                                                                                                                                                                                                             }
                                                                                                                                                                                                                         }
