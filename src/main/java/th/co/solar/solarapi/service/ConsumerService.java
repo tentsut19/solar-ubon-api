@@ -84,8 +84,8 @@ try {
                     if(LoadkwT_obj != null){
                         LoadkwT = Long.valueOf((String)LoadkwT_obj);
                     }
-                    log.info("gridkwTs1g1 : {}", gridkwT);
-                    log.info("LoadkwTs1g1 : {}", LoadkwT);
+//                    log.info("gridkwTs1g1 : {}", gridkwT);
+//                    log.info("LoadkwTs1g1 : {}", LoadkwT);
 
                     gridkwTall[0] += gridkwT;
                     LoadkwTall[0] += LoadkwT;
@@ -111,8 +111,8 @@ try {
                                 if(LoadkwT_obj != null){
                                     LoadkwT = Long.valueOf((String)LoadkwT_obj);
                                 }
-                                log.info("gridkwTs1g2 : {}", gridkwT);
-                                log.info("LoadkwTs1g2 : {}", LoadkwT);
+//                                log.info("gridkwTs1g2 : {}", gridkwT);
+//                                log.info("LoadkwTs1g2 : {}", LoadkwT);
 
                                 gridkwTall[0] += gridkwT;
                                 LoadkwTall[0] += LoadkwT;
@@ -138,8 +138,8 @@ try {
                                             if(LoadkwT_obj != null){
                                                 LoadkwT = Long.valueOf((String)LoadkwT_obj);
                                             }
-                                            log.info("gridkwTs1g3 : {}", gridkwT);
-                                            log.info("LoadkwTs1g3 : {}", LoadkwT);
+//                                            log.info("gridkwTs1g3 : {}", gridkwT);
+//                                            log.info("LoadkwTs1g3 : {}", LoadkwT);
 
                                             gridkwTall[0] += gridkwT;
                                             LoadkwTall[0] += LoadkwT;
@@ -165,8 +165,8 @@ try {
                                                         if(LoadkwT_obj != null){
                                                             LoadkwT = Long.valueOf((String)LoadkwT_obj);
                                                         }
-                                                        log.info("gridkwTs1g4 : {}", gridkwT);
-                                                        log.info("LoadkwTs1g4 : {}", LoadkwT);
+//                                                        log.info("gridkwTs1g4 : {}", gridkwT);
+//                                                        log.info("LoadkwTs1g4 : {}", LoadkwT);
 
                                                         gridkwTall[0] += gridkwT;
                                                         LoadkwTall[0] += LoadkwT;
@@ -192,8 +192,8 @@ try {
                                                                     if(LoadkwT_obj != null){
                                                                         LoadkwT = Long.valueOf((String)LoadkwT_obj);
                                                                     }
-                                                                    log.info("gridkwTs1g5 : {}", gridkwT);
-                                                                    log.info("LoadkwTs1g5 : {}", LoadkwT);
+//                                                                    log.info("gridkwTs1g5 : {}", gridkwT);
+//                                                                    log.info("LoadkwTs1g5 : {}", LoadkwT);
 
                                                                     gridkwTall[0] += gridkwT;
                                                                     LoadkwTall[0] += LoadkwT;
@@ -219,15 +219,15 @@ try {
                                                                                 if(LoadkwT_obj != null){
                                                                                     LoadkwT = Long.valueOf((String)LoadkwT_obj);
                                                                                 }
-                                                                                log.info("gridkwTs1g6 : {}", gridkwT);
-                                                                                log.info("LoadkwTs1g6 : {}", LoadkwT);
+//                                                                                log.info("gridkwTs1g6 : {}", gridkwT);
+//                                                                                log.info("LoadkwTs1g6 : {}", LoadkwT);
 
                                                                                 gridkwTall[0] += gridkwT;
                                                                                 LoadkwTall[0] += LoadkwT;
 
 
-                                                                                log.info("gridkwTall : {}", gridkwTall[0]);
-                                                                                log.info("LoadkwTall : {}", LoadkwTall[0]);
+//                                                                                log.info("gridkwTall : {}", gridkwTall[0]);
+//                                                                                log.info("LoadkwTall : {}", LoadkwTall[0]);
 
                                                                                 // ParameterRealtime2S1G1
                                                                                 ref2s1g1.addValueEventListener(new ValueEventListener() {
@@ -273,11 +273,11 @@ try {
                                                                                             if(persensolar_obj != null){
                                                                                                 persensolar = Long.valueOf((String)persensolar_obj);
                                                                                             }
-                                                                                            log.info("solartotalinputs2g1 : {}", solartotalinput);
-                                                                                            log.info("solartotaloutputs2g1 : {}", solartotaloutput);
-                                                                                            log.info("persengrids2g1 : {}", persengrid);
-                                                                                            log.info("persenpvs2g1 : {}", persenpv);
-                                                                                            log.info("persensolars2g1 : {}", persensolar);
+//                                                                                            log.info("solartotalinputs2g1 : {}", solartotalinput);
+//                                                                                            log.info("solartotaloutputs2g1 : {}", solartotaloutput);
+//                                                                                            log.info("persengrids2g1 : {}", persengrid);
+//                                                                                            log.info("persenpvs2g1 : {}", persenpv);
+//                                                                                            log.info("persensolars2g1 : {}", persensolar);
 
                                                                                             solartotalinputall[0] += solartotalinput;
                                                                                             solartotalinputall[0] = solartotalinputall[0] / group;
@@ -332,11 +332,11 @@ try {
                                                                                                         if(persensolar_obj != null){
                                                                                                             persensolar = Long.valueOf((String)persensolar_obj);
                                                                                                         }
-                                                                                                        log.info("solartotalinputs2g2 : {}", solartotalinput);
-                                                                                                        log.info("solartotaloutputs2g2 : {}", solartotaloutput);
-                                                                                                        log.info("persengrids2g2 : {}", persengrid);
-                                                                                                        log.info("persenpvs2g2 : {}", persenpv);
-                                                                                                        log.info("persensolars2g2 : {}", persensolar);
+//                                                                                                        log.info("solartotalinputs2g2 : {}", solartotalinput);
+//                                                                                                        log.info("solartotaloutputs2g2 : {}", solartotaloutput);
+//                                                                                                        log.info("persengrids2g2 : {}", persengrid);
+//                                                                                                        log.info("persenpvs2g2 : {}", persenpv);
+//                                                                                                        log.info("persensolars2g2 : {}", persensolar);
 
                                                                                                         solartotalinputall[0] += solartotalinput;
                                                                                                         solartotalinputall[0] = solartotalinputall[0] / group;
@@ -391,11 +391,11 @@ try {
                                                                                                                     if(persensolar_obj != null){
                                                                                                                         persensolar = Long.valueOf((String)persensolar_obj);
                                                                                                                     }
-                                                                                                                    log.info("solartotalinputs2g3 : {}", solartotalinput);
-                                                                                                                    log.info("solartotaloutputs2g3 : {}", solartotaloutput);
-                                                                                                                    log.info("persengrids2g3 : {}", persengrid);
-                                                                                                                    log.info("persenpvs2g3 : {}", persenpv);
-                                                                                                                    log.info("persensolars2g3 : {}", persensolar);
+//                                                                                                                    log.info("solartotalinputs2g3 : {}", solartotalinput);
+//                                                                                                                    log.info("solartotaloutputs2g3 : {}", solartotaloutput);
+//                                                                                                                    log.info("persengrids2g3 : {}", persengrid);
+//                                                                                                                    log.info("persenpvs2g3 : {}", persenpv);
+//                                                                                                                    log.info("persensolars2g3 : {}", persensolar);
 
                                                                                                                     solartotalinputall[0] += solartotalinput;
                                                                                                                     solartotalinputall[0] = solartotalinputall[0] / group;
@@ -451,11 +451,11 @@ try {
                                                                                                                                 if(persensolar_obj != null){
                                                                                                                                     persensolar = Long.valueOf((String)persensolar_obj);
                                                                                                                                 }
-                                                                                                                                log.info("solartotalinputs2g4 : {}", solartotalinput);
-                                                                                                                                log.info("solartotaloutputs2g4 : {}", solartotaloutput);
-                                                                                                                                log.info("persengrids2g4 : {}", persengrid);
-                                                                                                                                log.info("persenpvs2g4 : {}", persenpv);
-                                                                                                                                log.info("persensolars2g4 : {}", persensolar);
+//                                                                                                                                log.info("solartotalinputs2g4 : {}", solartotalinput);
+//                                                                                                                                log.info("solartotaloutputs2g4 : {}", solartotaloutput);
+//                                                                                                                                log.info("persengrids2g4 : {}", persengrid);
+//                                                                                                                                log.info("persenpvs2g4 : {}", persenpv);
+//                                                                                                                                log.info("persensolars2g4 : {}", persensolar);
 
                                                                                                                                 solartotalinputall[0] += solartotalinput;
                                                                                                                                 solartotalinputall[0] = solartotalinputall[0] / group;
@@ -511,11 +511,11 @@ try {
                                                                                                                                             if(persensolar_obj != null){
                                                                                                                                                 persensolar = Long.valueOf((String)persensolar_obj);
                                                                                                                                             }
-                                                                                                                                            log.info("solartotalinputs2g5 : {}", solartotalinput);
-                                                                                                                                            log.info("solartotaloutputs2g5 : {}", solartotaloutput);
-                                                                                                                                            log.info("persengrids2g5 : {}", persengrid);
-                                                                                                                                            log.info("persenpvs2g5 : {}", persenpv);
-                                                                                                                                            log.info("persensolars2g5 : {}", persensolar);
+//                                                                                                                                            log.info("solartotalinputs2g5 : {}", solartotalinput);
+//                                                                                                                                            log.info("solartotaloutputs2g5 : {}", solartotaloutput);
+//                                                                                                                                            log.info("persengrids2g5 : {}", persengrid);
+//                                                                                                                                            log.info("persenpvs2g5 : {}", persenpv);
+//                                                                                                                                            log.info("persensolars2g5 : {}", persensolar);
 
                                                                                                                                             solartotalinputall[0] += solartotalinput;
                                                                                                                                             solartotalinputall[0] = solartotalinputall[0] / group;
@@ -571,11 +571,11 @@ try {
                                                                                                                                                         if(persensolar_obj != null){
                                                                                                                                                             persensolar = Long.valueOf((String)persensolar_obj);
                                                                                                                                                         }
-                                                                                                                                                        log.info("solartotalinputs2g6 : {}", solartotalinput);
-                                                                                                                                                        log.info("solartotaloutputs2g6 : {}", solartotaloutput);
-                                                                                                                                                        log.info("persengrids2g6 : {}", persengrid);
-                                                                                                                                                        log.info("persenpvs2g6 : {}", persenpv);
-                                                                                                                                                        log.info("persensolars2g6 : {}", persensolar);
+//                                                                                                                                                        log.info("solartotalinputs2g6 : {}", solartotalinput);
+//                                                                                                                                                        log.info("solartotaloutputs2g6 : {}", solartotaloutput);
+//                                                                                                                                                        log.info("persengrids2g6 : {}", persengrid);
+//                                                                                                                                                        log.info("persenpvs2g6 : {}", persenpv);
+//                                                                                                                                                        log.info("persensolars2g6 : {}", persensolar);
 
                                                                                                                                                         solartotalinputall[0] += solartotalinput;
                                                                                                                                                         solartotalinputall[0] = solartotalinputall[0] / group;
@@ -585,11 +585,11 @@ try {
                                                                                                                                                         persenpvall[0] += persenpv;
                                                                                                                                                         persensolarall[0] += persensolar;
 
-                                                                                                                                                        log.info("solartotalinputall : {}", solartotalinputall[0]);
-                                                                                                                                                        log.info("solartotaloutputall : {}", solartotaloutputall[0]);
-                                                                                                                                                        log.info("persengridall : {}", persengridall[0]);
-                                                                                                                                                        log.info("persenpvall : {}", persenpvall[0]);
-                                                                                                                                                        log.info("persensolarall : {}", persensolarall[0]);
+//                                                                                                                                                        log.info("solartotalinputall : {}", solartotalinputall[0]);
+//                                                                                                                                                        log.info("solartotaloutputall : {}", solartotaloutputall[0]);
+//                                                                                                                                                        log.info("persengridall : {}", persengridall[0]);
+//                                                                                                                                                        log.info("persenpvall : {}", persenpvall[0]);
+//                                                                                                                                                        log.info("persensolarall : {}", persensolarall[0]);
 
 
 
@@ -625,10 +625,10 @@ try {
                                                                                                                                                                         solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                     }
 
-                                                                                                                                                                    log.info("griduses3g1 : {}", griduse);
-                                                                                                                                                                    log.info("loads3g1 : {}", load);
-                                                                                                                                                                    log.info("solartotalinputaccs3g1 : {}", solartotalinputacc);
-                                                                                                                                                                    log.info("solartotaloutputaccs3g1 : {}", solartotaloutputacc);
+//                                                                                                                                                                    log.info("griduses3g1 : {}", griduse);
+//                                                                                                                                                                    log.info("loads3g1 : {}", load);
+//                                                                                                                                                                    log.info("solartotalinputaccs3g1 : {}", solartotalinputacc);
+//                                                                                                                                                                    log.info("solartotaloutputaccs3g1 : {}", solartotaloutputacc);
 
                                                                                                                                                                     griduseall[0] += griduse;
                                                                                                                                                                     loadall[0] += load;
@@ -669,10 +669,10 @@ try {
                                                                                                                                                                                     solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                 }
 
-                                                                                                                                                                                log.info("griduses3g2 : {}", griduse);
-                                                                                                                                                                                log.info("loads3g2 : {}", load);
-                                                                                                                                                                                log.info("solartotalinputaccs3g2 : {}", solartotalinputacc);
-                                                                                                                                                                                log.info("solartotaloutputaccs3g2 : {}", solartotaloutputacc);
+//                                                                                                                                                                                log.info("griduses3g2 : {}", griduse);
+//                                                                                                                                                                                log.info("loads3g2 : {}", load);
+//                                                                                                                                                                                log.info("solartotalinputaccs3g2 : {}", solartotalinputacc);
+//                                                                                                                                                                                log.info("solartotaloutputaccs3g2 : {}", solartotaloutputacc);
 
                                                                                                                                                                                 griduseall[0] += griduse;
                                                                                                                                                                                 loadall[0] += load;
@@ -713,10 +713,10 @@ try {
                                                                                                                                                                                                 solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                             }
 
-                                                                                                                                                                                            log.info("griduses3g3 : {}", griduse);
-                                                                                                                                                                                            log.info("loads3g3 : {}", load);
-                                                                                                                                                                                            log.info("solartotalinputaccs3g3 : {}", solartotalinputacc);
-                                                                                                                                                                                            log.info("solartotaloutputaccs3g3 : {}", solartotaloutputacc);
+//                                                                                                                                                                                            log.info("griduses3g3 : {}", griduse);
+//                                                                                                                                                                                            log.info("loads3g3 : {}", load);
+//                                                                                                                                                                                            log.info("solartotalinputaccs3g3 : {}", solartotalinputacc);
+//                                                                                                                                                                                            log.info("solartotaloutputaccs3g3 : {}", solartotaloutputacc);
 
                                                                                                                                                                                             griduseall[0] += griduse;
                                                                                                                                                                                             loadall[0] += load;
@@ -757,10 +757,10 @@ try {
                                                                                                                                                                                                             solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                                         }
 
-                                                                                                                                                                                                        log.info("griduses3g4 : {}", griduse);
-                                                                                                                                                                                                        log.info("loads3g4 : {}", load);
-                                                                                                                                                                                                        log.info("solartotalinputaccs3g4 : {}", solartotalinputacc);
-                                                                                                                                                                                                        log.info("solartotaloutputaccs3g4 : {}", solartotaloutputacc);
+//                                                                                                                                                                                                        log.info("griduses3g4 : {}", griduse);
+//                                                                                                                                                                                                        log.info("loads3g4 : {}", load);
+//                                                                                                                                                                                                        log.info("solartotalinputaccs3g4 : {}", solartotalinputacc);
+//                                                                                                                                                                                                        log.info("solartotaloutputaccs3g4 : {}", solartotaloutputacc);
 
                                                                                                                                                                                                         griduseall[0] += griduse;
                                                                                                                                                                                                         loadall[0] += load;
@@ -801,10 +801,10 @@ try {
                                                                                                                                                                                                                         solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                                                     }
 
-                                                                                                                                                                                                                    log.info("griduses3g5 : {}", griduse);
-                                                                                                                                                                                                                    log.info("loads3g5 : {}", load);
-                                                                                                                                                                                                                    log.info("solartotalinputaccs3g5 : {}", solartotalinputacc);
-                                                                                                                                                                                                                    log.info("solartotaloutputaccs3g5 : {}", solartotaloutputacc);
+//                                                                                                                                                                                                                    log.info("griduses3g5 : {}", griduse);
+//                                                                                                                                                                                                                    log.info("loads3g5 : {}", load);
+//                                                                                                                                                                                                                    log.info("solartotalinputaccs3g5 : {}", solartotalinputacc);
+//                                                                                                                                                                                                                    log.info("solartotaloutputaccs3g5 : {}", solartotaloutputacc);
 
                                                                                                                                                                                                                     griduseall[0] += griduse;
                                                                                                                                                                                                                     loadall[0] += load;
@@ -845,16 +845,23 @@ try {
                                                                                                                                                                                                                                     solartotaloutputacc = (Long)solartotaloutputacc_obj;
                                                                                                                                                                                                                                 }
 
-                                                                                                                                                                                                                                log.info("griduses3g6 : {}", griduse);
-                                                                                                                                                                                                                                log.info("loads3g6 : {}", load);
-                                                                                                                                                                                                                                log.info("solartotalinputaccs3g6 : {}", solartotalinputacc);
-                                                                                                                                                                                                                                log.info("solartotaloutputaccs3g6 : {}", solartotaloutputacc);
+//                                                                                                                                                                                                                                log.info("griduses3g6 : {}", griduse);
+//                                                                                                                                                                                                                                log.info("loads3g6 : {}", load);
+//                                                                                                                                                                                                                                log.info("solartotalinputaccs3g6 : {}", solartotalinputacc);
+//                                                                                                                                                                                                                                log.info("solartotaloutputaccs3g6 : {}", solartotaloutputacc);
 
                                                                                                                                                                                                                                 griduseall[0] += griduse;
                                                                                                                                                                                                                                 loadall[0] += load;
                                                                                                                                                                                                                                 solartotalinputaccall[0] += solartotalinputacc;
                                                                                                                                                                                                                                 solartotaloutputaccall[0] += solartotaloutputacc;
 
+                                                                                                                                                                                                                                log.info("gridkwTall : {}", gridkwTall[0]);
+                                                                                                                                                                                                                                log.info("LoadkwTall : {}", LoadkwTall[0]);
+                                                                                                                                                                                                                                log.info("solartotalinputall : {}", solartotalinputall[0]);
+                                                                                                                                                                                                                                log.info("solartotaloutputall : {}", solartotaloutputall[0]);
+                                                                                                                                                                                                                                log.info("persengridall : {}", persengridall[0]);
+                                                                                                                                                                                                                                log.info("persenpvall : {}", persenpvall[0]);
+                                                                                                                                                                                                                                log.info("persensolarall : {}", persensolarall[0]);
                                                                                                                                                                                                                                 log.info("griduseall : {}", griduseall[0]);
                                                                                                                                                                                                                                 log.info("loadall : {}", loadall[0]);
                                                                                                                                                                                                                                 log.info("solartotalinputaccall : {}", solartotalinputaccall[0]);
