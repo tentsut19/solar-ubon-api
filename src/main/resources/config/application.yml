@@ -13,4 +13,4 @@ queue:
   weather-cron: '0 0 3 * * *'
   weather-today-cron: '0 0 8 * * *'
   weather-3-hours-cron: '0 0 */1 * * *'
-  enable: false
+  enable: true
