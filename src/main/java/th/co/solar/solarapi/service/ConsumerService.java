@@ -68,7 +68,7 @@ try {
         ref1s1g1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                log.info("isStart[0] : {}",isStart[0]);
+//                log.info("isStart[0] : {}",isStart[0]);
                 if(dataSnapshot.exists() && isStart[0]){
                     HashMap<String,HashMap> hashMapData = (HashMap<String,HashMap>) dataSnapshot.getValue();
                     Object obj = hashMapData.get("DataRealtime1S1G1");
