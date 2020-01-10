@@ -5,8 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import th.co.solar.solarapi.scheduler.QueueScheduler;
 import th.co.solar.solarapi.service.ConsumerService;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/")
@@ -18,9 +19,8 @@ public class ProcessController {
     ConsumerService consumerService;
 
     @GetMapping(value = "/processQueueTotal", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity.BodyBuilder processQueueTotal() {
-        consumerService.processQueueTotal();
-        return ResponseEntity.ok();
+    public ResponseEntity<Map<String, Object>> processQueueTotal() {
+        return ResponseEntity.ok(consumerService.processQueueTotal());
     }
 
 }
