@@ -20,9 +20,10 @@ import java.util.Map;
 @Slf4j
 public class ConsumerService {
 
-    public void processQueueTotal() {
+    public Map<String, Object> processQueueTotal() {
         log.info("Start processQueueTotal at {}", new Date());
         final boolean[] isStart = {true};
+        final Map<String, Object> userUpdates = new HashMap<>();
 try {
 
         final Long[] gridkwTall = {0L};
@@ -870,7 +871,7 @@ try {
 //                                                                                                                                                                                                                                log.info("solartotaloutputaccall : {}", solartotaloutputaccall[0]);
 
 
-                                                                                                                                                                                                                                Map<String, Object> userUpdates = new HashMap<>();
+
                                                                                                                                                                                                                                 userUpdates.put("gridkwTall", gridkwTall[0]);
                                                                                                                                                                                                                                 userUpdates.put("LoadkwTall", LoadkwTall[0]);
 
@@ -1071,6 +1072,9 @@ try {
 }catch (Exception e){
     log.error("Exception : ");
     e.printStackTrace();
+}finally {
+    log.info("End processQueueTotal at {}", new Date());
+    return userUpdates;
 }
 
     }
